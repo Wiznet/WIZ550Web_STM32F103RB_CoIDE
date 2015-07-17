@@ -8,7 +8,6 @@
 #include <stdarg.h>
 #include "stm32f10x_usart.h"
 
-
 /**
  * @brief  Transmit a char, if you want to use printf(), 
  *         you need implement this function
@@ -19,17 +18,16 @@
 void PrintChar(char c)
 {
 	USART_SendData(USART1,c);
-	while(USART_GetFlagStatus(USART1,USART_FLAG_TXE) == RESET){};
-
+	while(USART_GetFlagStatus(USART1,USART_FLAG_TXE) == RESET);
 }
 
 /** Maximum string size allowed (in bytes). */
-#define MAX_STRING_SIZE         200
+#define MAX_STRING_SIZE         100
 
 
 /** Required for proper compilation. */
 struct _reent r = {0, (FILE *) 0, (FILE *) 1, (FILE *) 0};
-//struct _reent *_impure_ptr = &r;
+struct _reent *_impure_ptr = &r;
 
 /**
  * @brief  Writes a character inside the given string. Returns 1.

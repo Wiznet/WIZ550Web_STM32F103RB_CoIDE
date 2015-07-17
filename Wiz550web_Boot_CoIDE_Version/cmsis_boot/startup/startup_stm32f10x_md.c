@@ -206,7 +206,7 @@ void Default_Reset_Handler(void)
         "    it      lt\n"
         "    strlt   r2, [r0], #4\n"
         "    blt     zero_loop");
-
+  
   /* Setup the microcontroller system. */
   SystemInit();
     
@@ -284,7 +284,6 @@ void Default_Reset_Handler(void)
 static void Default_Handler(void) 
 {
   /* Go into an infinite loop. */
-  printf("Boot Default Handler!!");
   while (1) 
   {
   }

@@ -98,7 +98,6 @@ static void display_SDcard_Info(uint8_t mount_ret);
  * Public functions
  ****************************************************************************/
 
-
 /**
  * @brief    Main routine for WIZ550WEB firmware
  * @return   Function should not exit.
@@ -177,7 +176,7 @@ int main(void)
 			if(ret == DHCP_IP_LEASED)
 			{
 #ifdef _MAIN_DEBUG_
-				printf(" - DHCP Success: DHCP Leased time : %d Sec.\r\n\r\n", getDHCPLeasetime());
+				printf(" - DHCP Success: DHCP Leased time : %ld Sec.\r\n\r\n", getDHCPLeasetime());
 #endif
 				break;
 			}
@@ -335,7 +334,7 @@ static void display_SDcard_Info(uint8_t mount_ret)
 	if(_MAX_SS == 512)
 	{
 		getMountedMemorySize(mount_ret, &totalSize, &availableSize);
-		printf(" - Available Memory Size : %d kB / %d kB ( %d kB is used )\r\n", availableSize, totalSize, (totalSize - availableSize));
+		printf(" - Available Memory Size : %ld kB / %ld kB ( %ld kB is used )\r\n", availableSize, totalSize, (totalSize - availableSize));
 	}
 	printf("\r\n");
 #endif

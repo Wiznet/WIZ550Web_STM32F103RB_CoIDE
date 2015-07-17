@@ -7,7 +7,6 @@
 
 #include <stdio.h>
 #include <string.h>
-//#include "diag/Trace.h"
 
 #include "stm32f10x.h"
 #include "common.h"
@@ -34,7 +33,7 @@
 //
 
 // ----- main() ---------------------------------------------------------------
-uint8_t socket_buf[1024];
+uint8_t socket_buf[2048];
 
 // Sample pragmas to cope with warnings. Please note the related line at
 // the end of this function, used to pop the compiler diagnostics status.
@@ -46,6 +45,7 @@ uint8_t socket_buf[1024];
 void application_jump(void)
 {
 	//DBG_PRINT(INFO_DBG, "\r\n### Application Start... ###\r\n");
+
 	__disable_irq();
 
 	/* Set Stack Pointer */
@@ -121,12 +121,12 @@ int main(int argc, char* argv[])
 
 	/* Load Configure Infomation */
 	load_S2E_Packet_from_storage();
+
 	/* Check MAC Address */
 	check_mac_address();
 
 	W5500_SPI_Init();
 	W5500_Init();
-
 	Timer_Configuration();
 
 	Net_Conf();
@@ -153,6 +153,6 @@ int main(int argc, char* argv[])
 	}
 }
 
-//#pragma GCC diagnostic pop
+#pragma GCC diagnostic pop
 
 // ----------------------------------------------------------------------------

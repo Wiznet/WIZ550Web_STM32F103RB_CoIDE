@@ -8,6 +8,7 @@
 #include <stdarg.h>
 #include "stm32f10x_usart.h"
 
+
 /**
  * @brief  Transmit a char, if you want to use printf(), 
  *         you need implement this function
@@ -470,6 +471,24 @@ signed int printf(const char *pFormat, ...)
 }
 
 
+/**
+ * @brief  Writes a formatted string inside another string.
+ *
+ * @param pStr     torage string.
+ * @param pFormat  Format string.
+ */
+signed int sprintf(char *pStr, const char *pFormat, ...)
+{
+    va_list ap;
+    signed int result;
+
+    // Forward call to vsprintf
+    va_start(ap, pFormat);
+    result = vsprintf(pStr, pFormat, ap);
+    va_end(ap);
+
+    return result;
+}
 
 
 /**

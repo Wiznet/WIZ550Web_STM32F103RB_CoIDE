@@ -61,47 +61,47 @@ int _lseek(int file, int ptr, int dir)
 }
 
 /*Low layer read(input) function*/
-__attribute__ ((used))
-int _read(int file, char *ptr, int len)
-{
-
-#if 0
-     //user code example
-     int i;
-     (void)file;
-
-     for(i = 0; i < len; i++)
-     {
-        // UART_GetChar is user's basic input function
-        *ptr++ = UART_GetChar();
-     }
-
-#endif
-
-    return len;
-}
-
-
-/*Low layer write(output) function*/
-__attribute__ ((used))
-int _write(int file, char *ptr, int len)
-{
-
-#if 0
-     //user code example
-
-     int i;
-     (void)file;
-
-     for(i = 0; i < len; i++)
-     {
-        // UART_PutChar is user's basic output function
-        UART_PutChar(*ptr++);
-     }
-#endif
-
-    return len;
-}
+//__attribute__ ((used))
+//int _read(int file, char *ptr, int len)
+//{
+//
+//#if 0
+//     //user code example
+//     int i;
+//     (void)file;
+//
+//     for(i = 0; i < len; i++)
+//     {
+//        // UART_GetChar is user's basic input function
+//        *ptr++ = UART_GetChar();
+//     }
+//
+//#endif
+//
+//    return len;
+//}
+//
+//
+///*Low layer write(output) function*/
+//__attribute__ ((used))
+//int _write(int file, char *ptr, int len)
+//{
+//
+//#if 0
+//     //user code example
+//
+//     int i;
+//     (void)file;
+//
+//     for(i = 0; i < len; i++)
+//     {
+//        // UART_PutChar is user's basic output function
+//        UART_PutChar(*ptr++);
+//     }
+//#endif
+//
+//    return len;
+//}
 
 __attribute__ ((used))
 void abort(void)

@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Project version="2G - 1.7.8" name="WIZ550web_App_CoIDE_v1-1-0">
+  <Target name="WIZ550web_App_CoIDE_v1-1-0" isCurrent="1">
+    <Device manufacturerId="9" manufacturerName="ST" chipId="310" chipName="STM32F103RB" boardId="" boardName=""/>
+    <BuildOption>
+      <Compile>
+        <Option name="OptimizationLevel" value="0"/>
+        <Option name="UseFPU" value="0"/>
+        <Option name="UserEditCompiler" value="-Og"/>
+        <Option name="SupportCPlusplus" value="0"/>
+        <Includepaths>
+          <Includepath path="."/>
+        </Includepaths>
+        <DefinedSymbols>
+          <Define name="STM32F103RB"/>
+          <Define name="STM32F10X_MD"/>
+          <Define name="USE_STDPERIPH_DRIVER"/>
+          <Define name="__ASSEMBLY__"/>
+        </DefinedSymbols>
+      </Compile>
+      <Link useDefault="0">
+        <Option name="DiscardUnusedSection" value="0"/>
+        <Option name="UserEditLinkder" value=""/>
+        <Option name="UseMemoryLayout" value="1"/>
+        <Option name="nostartfiles" value="1"/>
+        <Option name="LTO" value="0"/>
+        <Option name="IsNewStartupCode" value="1"/>
+        <Option name="Library" value="Use nano C Library"/>
+        <Option name="DiscardUnusedSections" value="1"/>
+        <LinkedLibraries/>
+        <MemoryAreas debugInFlashNotRAM="1">
+          <Memory name="IROM1" type="ReadOnly" size="0x0001A000" startValue="0x08006000"/>
+          <Memory name="IRAM1" type="ReadWrite" size="0x00005000" startValue="0x20000000"/>
+          <Memory name="IROM2" type="ReadOnly" size="" startValue=""/>
+          <Memory name="IRAM2" type="ReadWrite" size="" startValue=""/>
+        </MemoryAreas>
+        <LocateLinkFile path="../../configuration/programdata/wiz550web_app_coide_v1-1-0/arm-gcc-link.ld" type="0"/>
+      </Link>
+      <Output>
+        <Option name="OutputFileType" value="0"/>
+        <Option name="Path" value="./"/>
+        <Option name="Name" value="WIZ550web_App_CoIDE_v1-1-0"/>
+        <Option name="HEX" value="1"/>
+        <Option name="BIN" value="1"/>
+      </Output>
+      <User>
+        <UserRun name="Run#1" type="Before" checked="0" value=""/>
+        <UserRun name="Run#1" type="After" checked="0" value=""/>
+      </User>
+    </BuildOption>
+    <DebugOption>
+      <Option name="org.coocox.codebugger.gdbjtag.core.adapter" value="ST-Link"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.debugMode" value="SWD"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.clockDiv" value="1M"/>
+      <Option name="org.coocox.codebugger.gdbjtag.corerunToMain" value="1"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.jlinkgdbserver" value=""/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.userDefineGDBScript" value=""/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.targetEndianess" value="0"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.jlinkResetMode" value="Type 0: Normal"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.resetMode" value="SYSRESETREQ"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.ifSemihost" value="0"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.ifCacheRom" value="1"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.ipAddress" value="127.0.0.1"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.portNumber" value="2009"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.autoDownload" value="1"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.verify" value="1"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.downloadFuction" value="Erase Effected"/>
+      <Option name="org.coocox.codebugger.gdbjtag.core.defaultAlgorithm" value="STM32F10x_MD_128.elf"/>
+    </DebugOption>
+    <ExcludeFile/>
+  </Target>
+  <Components path="./">
+    <Component id="30" name="C Library" path="" type="2"/>
+    <Component id="50" name="CMSIS core" path="" type="2"/>
+    <Component id="439" name="CMSIS_Boot" path="" type="2"/>
+    <Component id="440" name="RCC" path="" type="2"/>
+    <Component id="442" name="PWR" path="" type="2"/>
+    <Component id="444" name="GPIO" path="" type="2"/>
+    <Component id="445" name="EXTI" path="" type="2"/>
+    <Component id="446" name="DMA" path="" type="2"/>
+    <Component id="448" name="RTC" path="" type="2"/>
+    <Component id="449" name="IWDG" path="" type="2"/>
+    <Component id="450" name="WWDG" path="" type="2"/>
+    <Component id="452" name="SPI" path="" type="2"/>
+    <Component id="453" name="I2C" path="" type="2"/>
+    <Component id="455" name="FLASH" path="" type="2"/>
+    <Component id="456" name="TIM" path="" type="2"/>
+    <Component id="457" name="ADC" path="" type="2"/>
+    <Component id="458" name="USART" path="" type="2"/>
+    <Component id="467" name="MISC" path="" type="2"/>
+  </Components>
+  <Files>
+    <File name="src/Configuration/ConfigData.c" path="src/Configuration/ConfigData.c" type="1"/>
+    <File name="src/netutil" path="" type="2"/>
+    <File name="src/PlatformHandler/storageHandler.c" path="src/PlatformHandler/storageHandler.c" type="1"/>
+    <File name="src/PlatformHandler/timerHandler.h" path="src/PlatformHandler/timerHandler.h" type="1"/>
+    <File name="src/Ethernet/W5500/w5500.c" path="src/Ethernet/W5500/w5500.c" type="1"/>
+    <File name="src/Internet/httpServer/httpParser.c" path="src/Internet/httpServer/httpParser.c" type="1"/>
+    <File name="src/PlatformHandler/uartHandler.h" path="src/PlatformHandler/uartHandler.h" type="1"/>
+    <File name="src/PlatformHandler/rccHandler.h" path="src/PlatformHandler/rccHandler.h" type="1"/>
+    <File name="src" path="" type="2"/>
+    <File name="src/PlatformHandler/mmcHandler.h" path="src/PlatformHandler/mmcHandler.h" type="1"/>
+    <File name="stm_lib/inc/stm32f10x_pwr.h" path="stm_lib/inc/stm32f10x_pwr.h" type="1"/>
+    <File name="src/ATcmd/cmdrun.h" path="src/ATcmd/cmdrun.h" type="1"/>
+    <File name="cmsis/core_cmFunc.h" path="cmsis/core_cmFunc.h" type="1"/>
+    <File name="stm_lib/src/misc.c" path="stm_lib/src/misc.c" type="1"/>
+    <File name="stm_lib/src/stm32f10x_wwdg.c" path="stm_lib/src/stm32f10x_wwdg.c" type="1"/>
+    <File name="cmsis_boot/stm32f10x.h" path="cmsis_boot/stm32f10x.h" type="1"/>
+    <File name="cmsis_boot/stm32f10x_conf.h" path="cmsis_boot/stm32f10x_conf.h" type="1"/>
+    <File name="stm_lib/inc/stm32f10x_flash.h" path="stm_lib/inc/stm32f10x_flash.h" type="1"/>
+    <File name="syscalls/syscalls.c" path="syscalls/syscalls.c" type="1"/>
+    <File name="stm_lib/inc/stm32f10x_spi.h" path="stm_lib/inc/stm32f10x_spi.h" type="1"/>
+    <File name="stm_lib/src/stm32f10x_adc.c" path="stm_lib/src/stm32f10x_adc.c" type="1"/>
+    <File name="stm_lib/inc/stm32f10x_dma.h" path="stm_lib/inc/stm32f10x_dma.h" type="1"/>
+    <File name="stm_lib/inc/stm32f10x_iwdg.h" path="stm_lib/inc/stm32f10x_iwdg.h" type="1"/>
+    <File name="src/PlatformHandler/storageHandler.h" path="src/PlatformHandler/storageHandler.h" type="1"/>
+    <File name="src/Configuration/ConfigData.h" path="src/Configuration/ConfigData.h" type="1"/>
+    <File name="src/PlatformHandler/rccHandler.c" path="src/PlatformHandler/rccHandler.c" type="1"/>
+    <File name="src/PlatformHandler/extiHandler.c" path="src/PlatformHandler/extiHandler.c" type="1"/>
+    <File name="src/PlatformHandler/gpioHandler.c" path="src/PlatformHandler/gpioHandler.c" type="1"/>
+    <File name="src/Internet/httpServer/httpParser.h" path="src/Internet/httpServer/httpParser.h" type="1"/>
+    <File name="src/util/mmc_sd.c" path="src/util/mmc_sd.c" type="1"/>
+    <File name="src/ATcmd" path="" type="2"/>
+    <File name="src/ATcmd/library" path="" type="2"/>
+    <File name="cmsis_boot/startup/startup_stm32f10x_md.c" path="cmsis_boot/startup/startup_stm32f10x_md.c" type="1"/>
+    <File name="stm_lib/src/stm32f10x_gpio.c" path="stm_lib/src/stm32f10x_gpio.c" type="1"/>
+    <File name="src/Ethernet" path="" type="2"/>
+    <File name="src/PlatformHandler/mmcHandler.c" path="src/PlatformHandler/mmcHandler.c" type="1"/>
+    <File name="src/ATcmd/cmdrun.c" path="src/ATcmd/cmdrun.c" type="1"/>
+    <File name="stm_lib/inc/stm32f10x_usart.h" path="stm_lib/inc/stm32f10x_usart.h" type="1"/>
+    <File name="cmsis_boot/system_stm32f10x.c" path="cmsis_boot/system_stm32f10x.c" type="1"/>
+    <File name="stm_lib/inc/misc.h" path="stm_lib/inc/misc.h" type="1"/>
+    <File name="cmsis/core_cmInstr.h" path="cmsis/core_cmInstr.h" type="1"/>
+    <File name="src/PlatformHandler/ring_buffer.h" path="src/PlatformHandler/ring_buffer.h" type="1"/>
+    <File name="src/util/spi.c" path="src/util/spi.c" type="1"/>
+    <File name="src/PlatformHandler/FatFs/ff_lfn_required.c" path="src/PlatformHandler/FatFs/ff_lfn_required.c" type="1"/>
+    <File name="src/Internet/DNS/dns.h" path="src/Internet/DNS/dns.h" type="1"/>
+    <File name="src/ATcmd/library/util.h" path="src/ATcmd/library/util.h" type="1"/>
+    <File name="stm_lib/src/stm32f10x_rcc.c" path="stm_lib/src/stm32f10x_rcc.c" type="1"/>
+    <File name="src/Ethernet/W5500/w5500.h" path="src/Ethernet/W5500/w5500.h" type="1"/>
+    <File name="src/ATcmd/atcmd.c" path="src/ATcmd/atcmd.c" type="1"/>
+    <File name="src/Internet/httpServer" path="" type="2"/>
+    <File name="src/Ethernet/socket.c" path="src/Ethernet/socket.c" type="1"/>
+    <File name="src/PlatformHandler/gpioHandler.h" path="src/PlatformHandler/gpioHandler.h" type="1"/>
+    <File name="stm_lib/src/stm32f10x_dma.c" path="stm_lib/src/stm32f10x_dma.c" type="1"/>
+    <File name="stm_lib/src" path="" type="2"/>
+    <File name="src/Internet/FTPServer/ftpd.h" path="src/Internet/FTPServer/ftpd.h" type="1"/>
+    <File name="cmsis" path="" type="2"/>
+    <File name="stm_lib" path="" type="2"/>
+    <File name="stm_lib/inc/stm32f10x_exti.h" path="stm_lib/inc/stm32f10x_exti.h" type="1"/>
+    <File name="src/ATcmd/library/util.c" path="src/ATcmd/library/util.c" type="1"/>
+    <File name="stm_lib/inc/stm32f10x_adc.h" path="stm_lib/inc/stm32f10x_adc.h" type="1"/>
+    <File name="src/PlatformHandler/FatFs" path="" type="2"/>
+    <File name="cmsis_boot/system_stm32f10x.h" path="cmsis_boot/system_stm32f10x.h" type="1"/>
+    <File name="src/callback/dhcp_cb.h" path="src/callback/dhcp_cb.h" type="1"/>
+    <File name="src/PlatformHandler/ring_buffer.c" path="src/PlatformHandler/ring_buffer.c" type="1"/>
+    <File name="src/PlatformHandler/FatFs/integer.h" path="src/PlatformHandler/FatFs/integer.h" type="1"/>
+    <File name="src/Internet/DNS/dns.c" path="src/Internet/DNS/dns.c" type="1"/>
+    <File name="src/ATcmd/atcmd.h" path="src/ATcmd/atcmd.h" type="1"/>
+    <File name="stm_lib/src/stm32f10x_i2c.c" path="stm_lib/src/stm32f10x_i2c.c" type="1"/>
+    <File name="src/PlatformHandler/uartHandler.c" path="src/PlatformHandler/uartHandler.c" type="1"/>
+    <File name="src/util" path="" type="2"/>
+    <File name="src/callback" path="" type="2"/>
+    <File name="stm_lib/src/stm32f10x_rtc.c" path="stm_lib/src/stm32f10x_rtc.c" type="1"/>
+    <File name="main.c" path="main.c" type="1"/>
+    <File name="src/PlatformHandler/flashHandler.h" path="src/PlatformHandler/flashHandler.h" type="1"/>
+    <File name="src/Ethernet/W5500" path="" type="2"/>
+    <File name="src/ATcmd/wiz_types.h" path="src/ATcmd/wiz_types.h" type="1"/>
+    <File name="src/ATcmd/library/at_common.h" path="src/ATcmd/library/at_common.h" type="1"/>
+    <File name="stm_lib/inc/stm32f10x_tim.h" path="stm_lib/inc/stm32f10x_tim.h" type="1"/>
+    <File name="src/Internet/httpServer/httpServer.c" path="src/Internet/httpServer/httpServer.c" type="1"/>
+    <File name="src/Internet/DHCP/dhcp.h" path="src/Internet/DHCP/dhcp.h" type="1"/>
+    <File name="cmsis_boot" path="" type="2"/>
+    <File name="src/callback/dhcp_cb.c" path="src/callback/dhcp_cb.c" type="1"/>
+    <File name="src/Internet/httpServer/httpUtil.c" path="src/Internet/httpServer/httpUtil.c" type="1"/>
+    <File name="src/Internet/DHCP" path="" type="2"/>
+    <File name="src/Internet/httpServer/dataflash.c" path="src/Internet/httpServer/dataflash.c" type="1"/>
+    <File name="stm_lib/src/stm32f10x_tim.c" path="stm_lib/src/stm32f10x_tim.c" type="1"/>
+    <File name="cmsis_boot/startup" path="" type="2"/>
+    <File name="src/PlatformHandler/FatFs/diskio.h" path="src/PlatformHandler/FatFs/diskio.h" type="1"/>
+    <File name="src/PlatformHandler/adcHandler.c" path="src/PlatformHandler/adcHandler.c" type="1"/>
+    <File name="stm_lib/src/stm32f10x_spi.c" path="stm_lib/src/stm32f10x_spi.c" type="1"/>
+    <File name="stm_lib/src/stm32f10x_iwdg.c" path="stm_lib/src/stm32f10x_iwdg.c" type="1"/>
+    <File name="src/Internet/FTPServer/stdio_private.h" path="src/Internet/FTPServer/stdio_private.h" type="1"/>
+    <File name="src/PlatformHandler/FatFs/ff.c" path="src/PlatformHandler/FatFs/ff.c" type="1"/>
+    <File name="src/Internet/FTPServer/ftpd.c" path="src/Internet/FTPServer/ftpd.c" type="1"/>
+    <File name="src/Internet/DHCP/dhcp.c" path="src/Internet/DHCP/dhcp.c" type="1"/>
+    <File name="stm_lib/src/stm32f10x_usart.c" path="stm_lib/src/stm32f10x_usart.c" type="1"/>
+    <File name="stm_lib/inc/stm32f10x_rtc.h" path="stm_lib/inc/stm32f10x_rtc.h" type="1"/>
+    <File name="src/util/spi.h" path="src/util/spi.h" type="1"/>
+    <File name="stm_lib/src/stm32f10x_pwr.c" path="stm_lib/src/stm32f10x_pwr.c" type="1"/>
+    <File name="src/PlatformHandler/spiHandler.c" path="src/PlatformHandler/spiHandler.c" type="1"/>
+    <File name="stm32f10x_it.h" path="stm32f10x_it.h" type="1"/>
+    <File name="stm_lib/inc/stm32f10x_gpio.h" path="stm_lib/inc/stm32f10x_gpio.h" type="1"/>
+    <File name="src/Internet/httpServer/dataflash.h" path="src/Internet/httpServer/dataflash.h" type="1"/>
+    <File name="src/ATcmd/library/sockutil.c" path="src/ATcmd/library/sockutil.c" type="1"/>
+    <File name="src/Ethernet/socket.h" path="src/Ethernet/socket.h" type="1"/>
+    <File name="src/Internet/DNS" path="" type="2"/>
+    <File name="src/netutil/netutil.h" path="src/netutil/netutil.h" type="1"/>
+    <File name="src/util/boardutil.c" path="src/util/boardutil.c" type="1"/>
+    <File name="src/PlatformHandler/adcHandler.h" path="src/PlatformHandler/adcHandler.h" type="1"/>
+    <File name="cmsis/core_cm3.h" path="cmsis/core_cm3.h" type="1"/>
+    <File name="stm_lib/src/stm32f10x_exti.c" path="stm_lib/src/stm32f10x_exti.c" type="1"/>
+    <File name="src/util/diskio.c" path="src/util/diskio.c" type="1"/>
+    <File name="src/PlatformHandler/FatFs/ffconf.h" path="src/PlatformHandler/FatFs/ffconf.h" type="1"/>
+    <File name="src/ATcmd/library/sockutil.h" path="src/ATcmd/library/sockutil.h" type="1"/>
+    <File name="src/Ethernet/wizchip_conf.c" path="src/Ethernet/wizchip_conf.c" type="1"/>
+    <File name="stm32f10x_it.c" path="stm32f10x_it.c" type="1"/>
+    <File name="src/Configuration/ConfigMessage.h" path="src/Configuration/ConfigMessage.h" type="1"/>
+    <File name="src/util/common.h" path="src/util/common.h" type="1"/>
+    <File name="src/Internet/FTPServer" path="" type="2"/>
+    <File name="src/PlatformHandler/flashHandler.c" path="src/PlatformHandler/flashHandler.c" type="1"/>
+    <File name="src/PlatformHandler/userHandler.h" path="src/PlatformHandler/userHandler.h" type="1"/>
+    <File name="src/PlatformHandler" path="" type="2"/>
+    <File name="src/Internet/httpServer/httpUtil.h" path="src/Internet/httpServer/httpUtil.h" type="1"/>
+    <File name="src/Configuration/ConfigMessage.c" path="src/Configuration/ConfigMessage.c" type="1"/>
+    <File name="src/PlatformHandler/spiHandler.h" path="src/PlatformHandler/spiHandler.h" type="1"/>
+    <File name="stm_lib/src/stm32f10x_flash.c" path="stm_lib/src/stm32f10x_flash.c" type="1"/>
+    <File name="src/Internet" path="" type="2"/>
+    <File name="src/netutil/netutil.c" path="src/netutil/netutil.c" type="1"/>
+    <File name="stm_lib/inc/stm32f10x_rcc.h" path="stm_lib/inc/stm32f10x_rcc.h" type="1"/>
+    <File name="stm_lib/inc/stm32f10x_i2c.h" path="stm_lib/inc/stm32f10x_i2c.h" type="1"/>
+    <File name="syscalls" path="" type="2"/>
+    <File name="src/util/boardutil.h" path="src/util/boardutil.h" type="1"/>
+    <File name="src/util/types.h" path="src/util/types.h" type="1"/>
+    <File name="src/PlatformHandler/timerHandler.c" path="src/PlatformHandler/timerHandler.c" type="1"/>
+    <File name="src/util/mmc_sd.h" path="src/util/mmc_sd.h" type="1"/>
+    <File name="src/PlatformHandler/userHandler.c" path="src/PlatformHandler/userHandler.c" type="1"/>
+    <File name="src/Internet/httpServer/httpServer.h" path="src/Internet/httpServer/httpServer.h" type="1"/>
+    <File name="src/PlatformHandler/extiHandler.h" path="src/PlatformHandler/extiHandler.h" type="1"/>
+    <File name="src/Configuration" path="" type="2"/>
+    <File name="stm_lib/inc" path="" type="2"/>
+    <File name="src/PlatformHandler/FatFs/ff.h" path="src/PlatformHandler/FatFs/ff.h" type="1"/>
+    <File name="stm_lib/inc/stm32f10x_wwdg.h" path="stm_lib/inc/stm32f10x_wwdg.h" type="1"/>
+    <File name="src/Ethernet/wizchip_conf.h" path="src/Ethernet/wizchip_conf.h" type="1"/>
+  </Files>
+</Project>

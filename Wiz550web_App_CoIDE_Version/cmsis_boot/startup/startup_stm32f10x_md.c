@@ -182,8 +182,7 @@ void (* const g_pfnVectors[])(void) =
   * @param  None
   * @retval None
   */
-void __attribute__ ((section(".after_vectors"),noreturn))
-Default_Reset_Handler(void)
+void Default_Reset_Handler(void)
 {
   /* Initialize data and bss */
   unsigned long *pulSrc, *pulDest;

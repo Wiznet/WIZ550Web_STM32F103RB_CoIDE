@@ -1,8 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<History> 
-  <File usedCount="2" path="cmsis_boot/stm32f10x.h"/>  
-  <File usedCount="2" path="cmsis_boot/stm32f10x_conf.h"/>  
-  <File usedCount="2" path="syscalls/syscalls.c"/>  
-  <File usedCount="2" path="stdio/printf.c"/>
+<History>
+  <File usedCount="2" path="syscalls/syscalls.c"/>
 </History>
